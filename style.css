@@ -12,14 +12,14 @@ html {
 
 body {
   font-family: sans-serif;
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(160, 0, 0);
 }
 
 .phone-model {
   font-size: 2rem;
   text-align: center;
   margin: 50px;
-  font-family: pilat,  sans-serif;
+  font-family: pilat, sans-serif;
   color: white;
 }
 
@@ -46,12 +46,6 @@ body {
   transform: rotateY(180deg);
 }
 
-.notifications {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
 .phone__front {
   border-radius: 20px;
   background-color: rgba(255, 72, 0, 0.726);
@@ -68,96 +62,24 @@ body {
   background-image: url(./back2.jpeg);
   background-size: cover;
   background-blend-mode: color-burn;
-  box-shadow: 3px 3px 10px white;
+  box-shadow: 3px 3px 3px rgb(143, 143, 143);
   color: white;
 }
 
-.front-bottom{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    left: 50%;
-    transform: translateX(-50%);
+/* top section : signal, notch, battery */
+.notifications {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.nav{
-    width: 60px;
-    height: 2px;
-    background-color: white;
-    border: 3px;
-}
-
-.display{
-    padding: 15px;
-}
-
-.apps{
-    /* background-color: orange; */
-    margin-bottom: 20px;
-}
-
-.apps img {
-    width: 35px;
-    margin: 5px;
-}
-
-.google-search{
-    background-color: orange;
-    display: flex;
-    align-items: center;
-    padding: 2px 4px;
-    margin-bottom: 20px;
-    background-color: white;
-    border-radius: 20px;
-    /* width: 90%; */
-}
-
-.google-search input{
-    width: 150px;
-    padding: 2px 5px;
-    border: none;
-    outline: none;
-}
-
-.google-search > * {
-    margin: 3px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-.phone__back {
-  border-radius: 20px;
-  background-color: rgb(255, 255, 255);
-  padding: 10px;
-  position: absolute;
-  width: 100%;
-  box-shadow: 3px 3px 10px white;
-  height: 100%;
-  top: 0;
-  left: 0;
-  backface-visibility: hidden;
-  transform: rotateY(180deg);
-}
-
-.time span {
+/* signal */
+.signal span {
   font-size: 12px;
   font-weight: 500;
 }
 
-/* notch */
+/* notch :  camera, speaker*/
 .notch {
   display: inline-flex;
   align-items: flex-end;
@@ -187,10 +109,6 @@ body {
   border-radius: 50%;
 }
 
-.front-camera-1 {
-}
-.front-camera-2 {
-}
 .speaker-top {
   height: 4px;
   width: 40px;
@@ -198,15 +116,76 @@ body {
   border-radius: 10px;
 }
 
-.display-date{
-    margin-top: 20px;
+.charge {
+  font-size: 12px;
 }
 
-.display-date .temp{
-    margin-top: 5px;
+.display {
+  padding: 15px;
 }
 
+.display-date {
+  margin-top: 20px;
+}
 
+.display-date .temp {
+  margin-top: 5px;
+}
+
+.apps {
+  /* background-color: orange; */
+  margin-bottom: 20px;
+}
+
+.apps img {
+  width: 35px;
+  margin: 5px;
+}
+
+.google-search {
+  background-color: orange;
+  display: flex;
+  align-items: center;
+  padding: 2px 4px;
+  margin-bottom: 20px;
+  background-color: white;
+  border-radius: 20px;
+  /* width: 90%; */
+}
+
+.google-search img {
+  height: 20px;
+}
+
+.google-search input {
+  width: 150px;
+  padding: 2px 5px;
+  border: none;
+  outline: none;
+}
+
+.google-search > * {
+  margin: 3px;
+}
+
+.front-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nav {
+  width: 60px;
+  height: 2px;
+  background-color: white;
+  border: 3px;
+}
 
 .speaker-bottom {
   height: 4px;
@@ -217,25 +196,19 @@ body {
   bottom: -15px;
 }
 
-.charge {
-  font-size: 12px;
+.phone__back {
+  border-radius: 20px;
+  background-color: rgb(255, 255, 255);
+  padding: 10px;
+  position: absolute;
+  width: 100%;
+  box-shadow: 3px 3px 10px white;
+  height: 100%;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .camera-container {
   display: flex;
@@ -306,7 +279,7 @@ body {
   z-index: 3;
 }
 
-.back-camera-falsh::after{
+.back-camera-falsh::after {
   content: "";
   width: 6px;
   height: 6px;
@@ -318,23 +291,22 @@ body {
 }
 
 .fingerpint {
-    width: 40px;
-    height: 40px;
-    background-color: rgb(246, 246, 246);
-    border-radius: 50px;
-    position: absolute;
-    top: 18%;
-    left: 50%;
-    transform: translateX(-50%);
-    border: 1px solid silver;
+  width: 40px;
+  height: 40px;
+  background-color: rgb(246, 246, 246);
+  border-radius: 50px;
+  position: absolute;
+  top: 18%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 1px solid silver;
 }
 .logo {
-    font-size: 35px;
-    font-weight: 600;
-    color: silver;
-    position: absolute;
-    bottom: 18%;
-    left: 50%;
-    transform: translateX(-50%);
+  font-size: 35px;
+  font-weight: 600;
+  color: silver;
+  position: absolute;
+  bottom: 18%;
+  left: 50%;
+  transform: translateX(-50%);
 }
-
