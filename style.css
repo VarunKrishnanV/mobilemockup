@@ -1,0 +1,340 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: rgb(0, 0, 0);
+}
+
+.phone-model {
+  font-size: 2rem;
+  text-align: center;
+  margin: 50px;
+  font-family: pilat,  sans-serif;
+  color: white;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.phone {
+  /* transform: skewY(20deg); */
+  /* background-color: red; */
+  padding: 5px;
+  width: 265px;
+  height: 500px;
+  position: relative;
+  transition: 1s ease-in transform;
+  transform-origin: center;
+  transform-style: preserve-3d;
+}
+
+.phone:hover {
+  transform: rotateY(180deg);
+}
+
+.notifications {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.phone__front {
+  border-radius: 20px;
+  background-color: rgba(255, 72, 0, 0.726);
+  padding: 0px 10px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  backface-visibility: hidden;
+  border: 5px solid black;
+  border-bottom: 30px solid black;
+  background-image: url(./back2.jpeg);
+  background-size: cover;
+  background-blend-mode: color-burn;
+  box-shadow: 3px 3px 10px white;
+  color: white;
+}
+
+.front-bottom{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nav{
+    width: 60px;
+    height: 2px;
+    background-color: white;
+    border: 3px;
+}
+
+.display{
+    padding: 15px;
+}
+
+.apps{
+    /* background-color: orange; */
+    margin-bottom: 20px;
+}
+
+.apps img {
+    width: 35px;
+    margin: 5px;
+}
+
+.google-search{
+    background-color: orange;
+    display: flex;
+    align-items: center;
+    padding: 2px 4px;
+    margin-bottom: 20px;
+    background-color: white;
+    border-radius: 20px;
+    /* width: 90%; */
+}
+
+.google-search input{
+    width: 150px;
+    padding: 2px 5px;
+    border: none;
+    outline: none;
+}
+
+.google-search > * {
+    margin: 3px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.phone__back {
+  border-radius: 20px;
+  background-color: rgb(255, 255, 255);
+  padding: 10px;
+  position: absolute;
+  width: 100%;
+  box-shadow: 3px 3px 10px white;
+  height: 100%;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+}
+
+.time span {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* notch */
+.notch {
+  display: inline-flex;
+  align-items: flex-end;
+  background-color: rgb(0, 0, 0);
+  margin-top: -5px;
+  padding: 4px 8px 10px;
+  border-radius: 0 0 15px 15px;
+}
+
+.notch > * {
+  margin: 2px;
+}
+
+.front-camera {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: rgb(47, 47, 47);
+  display: grid;
+  place-items: center;
+}
+
+.lens {
+  width: 8px;
+  height: 8px;
+  background-color: rgb(102, 102, 102);
+  border-radius: 50%;
+}
+
+.front-camera-1 {
+}
+.front-camera-2 {
+}
+.speaker-top {
+  height: 4px;
+  width: 40px;
+  background-color: rgb(97, 97, 97);
+  border-radius: 10px;
+}
+
+.display-date{
+    margin-top: 20px;
+}
+
+.display-date .temp{
+    margin-top: 5px;
+}
+
+
+
+.speaker-bottom {
+  height: 4px;
+  width: 100px;
+  background-color: rgb(97, 97, 97);
+  border-radius: 10px;
+  position: relative;
+  bottom: -15px;
+}
+
+.charge {
+  font-size: 12px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.camera-container {
+  display: flex;
+  align-items: center;
+}
+.back-camera {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgb(2, 2, 2);
+  border: 2px solid gray;
+  display: grid;
+  place-items: center;
+}
+
+.back-lens {
+  width: 12px;
+  height: 12px;
+  background-color: rgb(49, 49, 49);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+
+.back-lens::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background: linear-gradient(to left, rgb(36, 36, 36) 50%, black);
+  position: absolute;
+  border-radius: 50%;
+}
+
+.back-camera-sensor {
+  width: 6px;
+  height: 6px;
+  background-color: rgb(177, 177, 177);
+  margin-left: 5px;
+  border-radius: 50px;
+  display: grid;
+  place-items: center;
+}
+
+.back-camera-sensor::after {
+  content: "";
+  width: 2px;
+  height: 2px;
+  background-color: rgb(58, 0, 0);
+  position: absolute;
+}
+
+.back-camera-falsh {
+  width: 10px;
+  height: 10px;
+  background-color: rgb(255, 183, 49);
+  border-radius: 50px;
+  margin-left: 10px;
+  background: repeating-radial-gradient(circle at center, 0 black, 20px white);
+  background: repeating-radial-gradient(
+    ellipse farthest-corner at 20% 20%,
+    rgb(255, 255, 255) 0 0%,
+    rgba(133, 133, 133, 0.315) 5% 10%
+  );
+  backdrop-filter: blur(5px);
+  display: grid;
+  place-items: center;
+  position: relative;
+  z-index: 3;
+}
+
+.back-camera-falsh::after{
+  content: "";
+  width: 6px;
+  height: 6px;
+  display: block;
+  background-color: rgba(226, 185, 0, 0.52);
+  position: absolute;
+  z-index: 1;
+  border-radius: 50%;
+}
+
+.fingerpint {
+    width: 40px;
+    height: 40px;
+    background-color: rgb(246, 246, 246);
+    border-radius: 50px;
+    position: absolute;
+    top: 18%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 1px solid silver;
+}
+.logo {
+    font-size: 35px;
+    font-weight: 600;
+    color: silver;
+    position: absolute;
+    bottom: 18%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
